@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HANAUL | 韓国プレミアムコスメ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@200;300;400;500;600&family=Noto+Serif+KR:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>全品送料無料 | 初回限定 20%OFF クーポンコード: <span>HANAUL20</span></p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-left">
+        <a href="#" class="nav-link">スキンケア</a>
+        <a href="#" class="nav-link">メイクアップ</a>
+        <a href="#" class="nav-link">ベストセラー</a>
+      </div>
+      <a href="#" class="logo">
+        <span class="logo-sub">Seoul Beauty</span>
+        HANAUL
+        <span class="logo-tagline">하늘</span>
+      </a>
+      <div class="nav-right">
+        <a href="#" class="nav-link">ブランドストーリー</a>
+        <a href="#" class="nav-link">レビュー</a>
+        <div class="nav-icons">
+          <button class="icon-btn" aria-label="検索" id="searchBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="アカウント">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </button>
+          <button class="icon-btn cart-btn" aria-label="カート" id="cartBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#" class="nav-link">スキンケア</a>
+      <a href="#" class="nav-link">メイクアップ</a>
+      <a href="#" class="nav-link">ベストセラー</a>
+      <a href="#" class="nav-link">ブランドストーリー</a>
+      <a href="#" class="nav-link">レビュー</a>
+    </div>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-container">
+      <input type="text" placeholder="商品を検索..." class="search-input" id="searchInput">
+      <button class="search-close" id="searchClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-label" data-aos="fade-up">New Collection 2026 S/S</span>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        肌本来の美しさを<br>
+        <em>呼び覚ます</em>
+      </h1>
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">
+        韓国最先端のバイオテクノロジーと<br>
+        自然由来成分が融合した、次世代スキンケア
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+        <a href="#products" class="btn btn-primary">コレクションを見る</a>
+        <a href="#story" class="btn btn-outline">ブランドストーリー</a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">自然由来成分</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">50万+</span>
+          <span class="stat-label">愛用者</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">K-Beauty</span>
+          <span class="stat-label">Award 2025</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Category Section -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Categories</span>
+        <h2 class="section-title">カテゴリー</h2>
+      </div>
+      <div class="category-grid">
+        <a href="#" class="category-card" data-aos="fade-up">
+          <div class="category-img" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);">
+            <span class="category-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+            </span>
+          </div>
+          <h3>セラム & エッセンス</h3>
+          <p>32 items</p>
+        </a>
+        <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="category-img" style="background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);">
+            <span class="category-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </span>
+          </div>
+          <h3>クリーム & モイスチャー</h3>
+          <p>28 items</p>
+        </a>
+        <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="category-img" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+            <span class="category-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3z"/></svg>
+            </span>
+          </div>
+          <h3>サンケア & UV</h3>
+          <p>18 items</p>
+        </a>
+        <a href="#" class="category-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="category-img" style="background: linear-gradient(135deg, #fce4ec 0%, #e1bee7 100%);">
+            <span class="category-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 3h12l4 6-10 13L2 9z"/></svg>
+            </span>
+          </div>
+          <h3>リップ & カラー</h3>
+          <p>45 items</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Best Sellers</span>
+        <h2 class="section-title">人気商品</h2>
+        <p class="section-desc">多くのお客様に愛される、HANAULのベストセラーコレクション</p>
+      </div>
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="skincare">スキンケア</button>
+        <button class="filter-btn" data-filter="makeup">メイクアップ</button>
+        <button class="filter-btn" data-filter="suncare">サンケア</button>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <!-- Products will be rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section class="banner" id="story">
+    <div class="banner-inner">
+      <div class="banner-content" data-aos="fade-right">
+        <span class="section-label">Our Philosophy</span>
+        <h2 class="banner-title">自然と科学の<br>完璧な調和</h2>
+        <p class="banner-desc">
+          済州島の清らかな自然から厳選された原料と、
+          韓国最先端のバイオテクノロジーを融合。
+          肌に本当に必要なものだけを届ける、
+          それがHANAULの約束です。
+        </p>
+        <div class="banner-features">
+          <div class="feature">
+            <span class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <div>
+              <strong>VEGAN認証</strong>
+              <span>動物実験フリー</span>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <strong>済州島原産</strong>
+              <span>厳選された天然原料</span>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            <div>
+              <strong>皮膚科テスト済</strong>
+              <span>敏感肌対応</span>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-dark">もっと詳しく</a>
+      </div>
+      <div class="banner-visual" data-aos="fade-left">
+        <div class="visual-card">
+          <div class="visual-bg"></div>
+          <div class="visual-text">
+            <span class="visual-year">Since</span>
+            <span class="visual-num">2019</span>
+            <span class="visual-place">Seoul, Korea</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="new-arrivals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">New Arrivals</span>
+        <h2 class="section-title">新商品</h2>
+      </div>
+      <div class="arrivals-grid">
+        <div class="arrival-card arrival-large" data-aos="fade-up">
+          <div class="arrival-img" style="background: linear-gradient(135deg, #e8d5c4 0%, #f5e6d3 100%);">
+            <span class="arrival-badge">NEW</span>
+            <div class="arrival-float">
+              <div class="float-bottle"></div>
+            </div>
+          </div>
+          <div class="arrival-info">
+            <span class="arrival-category">セラム</span>
+            <h3>グロウ ガラクトミセス エッセンス</h3>
+            <p>97%ガラクトミセス発酵濾液配合。肌のキメを整え、透明感あふれるツヤ肌へ。</p>
+            <div class="arrival-price">
+              <span class="price">¥5,800</span>
+              <button class="btn btn-small btn-primary add-to-cart-btn" data-name="グロウ ガラクトミセス エッセンス" data-price="5800">カートに入れる</button>
+            </div>
+          </div>
+        </div>
+        <div class="arrival-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="arrival-img" style="background: linear-gradient(135deg, #d4e4ed 0%, #e8f0f5 100%);">
+            <span class="arrival-badge">NEW</span>
+          </div>
+          <div class="arrival-info">
+            <span class="arrival-category">クリーム</span>
+            <h3>ウォーターバンク ヒアルロン クリーム</h3>
+            <div class="arrival-price">
+              <span class="price">¥4,200</span>
+              <button class="btn btn-small btn-primary add-to-cart-btn" data-name="ウォーターバンク ヒアルロン クリーム" data-price="4200">カートに入れる</button>
+            </div>
+          </div>
+        </div>
+        <div class="arrival-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="arrival-img" style="background: linear-gradient(135deg, #f5d5d5 0%, #fce8e8 100%);">
+            <span class="arrival-badge">NEW</span>
+          </div>
+          <div class="arrival-info">
+            <span class="arrival-category">リップ</span>
+            <h3>ベルベット リキッドルージュ #07 ロゼ</h3>
+            <div class="arrival-price">
+              <span class="price">¥2,800</span>
+              <button class="btn btn-small btn-primary add-to-cart-btn" data-name="ベルベット リキッドルージュ #07 ロゼ" data-price="2800">カートに入れる</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Reviews</span>
+        <h2 class="section-title">お客様の声</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card" data-aos="fade-up">
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"使い始めて2週間で肌のトーンが明るくなりました。テクスチャーも軽くて、べたつかないのが最高です。リピート確定！"</p>
+          <div class="review-author">
+            <div class="author-avatar">M</div>
+            <div>
+              <strong>Mika S.</strong>
+              <span>ビタミンCセラム 購入</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"敏感肌で色々試してきましたが、やっと出会えた運命のクリーム。荒れることなく、しっとり潤います。パッケージも可愛い！"</p>
+          <div class="review-author">
+            <div class="author-avatar">Y</div>
+            <div>
+              <strong>Yuki T.</strong>
+              <span>シカ リペアクリーム 購入</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"友人の勧めで購入。日焼け止めなのに美容液みたいな使い心地。白浮きもないし、化粧下地としても優秀すぎます。"</p>
+          <div class="review-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <strong>Ayaka M.</strong>
+              <span>トーンアップUVクリーム 購入</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed -->
+  <section class="instagram">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">@hanaul_beauty</span>
+        <h2 class="section-title">Instagram</h2>
+      </div>
+      <div class="insta-grid">
+        <div class="insta-item" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);"><span>#ツヤ肌</span></div>
+        <div class="insta-item" style="background: linear-gradient(135deg, #e8eaf6, #c5cae9);"><span>#水光肌</span></div>
+        <div class="insta-item" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);"><span>#韓国コスメ</span></div>
+        <div class="insta-item" style="background: linear-gradient(135deg, #e0f2f1, #b2dfdb);"><span>#スキンケア</span></div>
+        <div class="insta-item" style="background: linear-gradient(135deg, #fce4ec, #e1bee7);"><span>#HANAUL</span></div>
+        <div class="insta-item" style="background: linear-gradient(135deg, #e8d5c4, #f5e6d3);"><span>#美肌</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-content">
+          <span class="section-label">Newsletter</span>
+          <h2>最新情報をお届け</h2>
+          <p>新商品やセール情報、ビューティーTipsをいち早くお届けします。</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.newsletter-success').style.display='block'; this.querySelector('button').textContent='登録完了';">
+          <div class="input-group">
+            <input type="email" placeholder="メールアドレスを入力" required>
+            <button type="submit" class="btn btn-primary">登録する</button>
+          </div>
+          <p class="newsletter-success" style="display:none;">ご登録ありがとうございます！</p>
+          <p class="newsletter-note">いつでも解除可能です。プライバシーポリシーに同意の上、ご登録ください。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">HANAUL</a>
+          <p>韓国発、自然と科学が融合した<br>プレミアムビューティーブランド</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" aria-label="LINE">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 5-4.5 9-10 9-1.5 0-3-.3-4.3-.9L3 20l1.3-3.2C2.5 15 1 12.6 1 10c0-5 4.5-9 10-9s10 4 10 9z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>ショッピング</h4>
+          <a href="#">スキンケア</a>
+          <a href="#">メイクアップ</a>
+          <a href="#">サンケア</a>
+          <a href="#">セット商品</a>
+          <a href="#">ギフト</a>
+        </div>
+        <div class="footer-links">
+          <h4>サポート</h4>
+          <a href="#">よくある質問</a>
+          <a href="#">配送について</a>
+          <a href="#">返品・交換</a>
+          <a href="#">お問い合わせ</a>
+          <a href="#">サイズガイド</a>
+        </div>
+        <div class="footer-links">
+          <h4>ブランド</h4>
+          <a href="#">ブランドストーリー</a>
+          <a href="#">成分へのこだわり</a>
+          <a href="#">サステナビリティ</a>
+          <a href="#">プレス</a>
+          <a href="#">採用情報</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HANAUL. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">利用規約</a>
+          <a href="#">特定商取引法に基づく表記</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>ショッピングカート</h3>
+      <button class="cart-close" id="cartClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <p>カートは空です</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>合計</span>
+        <span id="cartTotal">¥0</span>
+      </div>
+      <button class="btn btn-primary btn-full">ご購入手続きへ</button>
+      <p class="cart-note">税込価格 | 送料無料</p>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal" id="quickViewModal">
+    <button class="modal-close" id="modalClose">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="modal-body">
+      <div class="modal-img" id="modalImg"></div>
+      <div class="modal-info">
+        <span class="modal-category" id="modalCategory"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-rating">
+          <div class="stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span id="modalReviews"></span>
+        </div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-price" id="modalPrice"></div>
+        <div class="modal-quantity">
+          <button class="qty-btn" id="qtyMinus">-</button>
+          <span id="qtyValue">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+        <button class="btn btn-primary btn-full" id="modalAddToCart">カートに入れる</button>
+        <div class="modal-meta">
+          <p><strong>配送:</strong> 2-4営業日でお届け</p>
+          <p><strong>返品:</strong> 未開封品に限り30日間返品可能</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
