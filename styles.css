@@ -599,13 +599,22 @@ img {
 .category-img {
   aspect-ratio: 1;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 20px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+}
+
+.category-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-slow);
+}
+
+.category-card:hover .category-img img {
+  transform: scale(1.05);
 }
 
 .category-icon {
@@ -693,6 +702,8 @@ img {
 .product-image-bg {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
   transition: var(--transition-slow);
 }
 
@@ -899,16 +910,10 @@ img {
 .visual-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #e8d5c4 0%, #d4bea8 30%, #c4a882 60%, #b8967a 100%);
-}
-
-.visual-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.2) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1) 0%, transparent 40%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .visual-text {
@@ -979,6 +984,19 @@ img {
   height: 200px;
   position: relative;
   overflow: hidden;
+  background: var(--color-border-light);
+}
+
+.arrival-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-slow);
+}
+
+.arrival-card:hover .arrival-img img {
+  transform: scale(1.03);
 }
 
 .arrival-badge {
@@ -1160,12 +1178,29 @@ img {
   justify-content: center;
 }
 
+.insta-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-slow);
+}
+
+.insta-item:hover img {
+  transform: scale(1.05);
+}
+
 .insta-item span {
+  position: relative;
+  z-index: 2;
   font-size: 0.8rem;
-  font-weight: 400;
-  color: rgba(0,0,0,0.3);
+  font-weight: 500;
+  color: white;
   opacity: 0;
   transition: var(--transition);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .insta-item:hover span {
@@ -1176,12 +1211,13 @@ img {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(0,0,0,0);
   transition: var(--transition);
 }
 
 .insta-item:hover::after {
-  background: rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.2);
 }
 
 /* ===== Newsletter ===== */

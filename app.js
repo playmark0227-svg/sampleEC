@@ -8,7 +8,7 @@ const products = [
     price: 4800,
     originalPrice: null,
     badge: 'best',
-    color: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%)',
+    image: 'AI%20Image%20Generation/asset_c0p3rd3wi_1775718830045.png',
     desc: 'ピュアビタミンC 15%配合。ブライトニング効果で透明感のある肌へ導きます。軽いテクスチャーで素早く浸透。',
     reviews: 234
   },
@@ -20,7 +20,7 @@ const products = [
     price: 3600,
     originalPrice: null,
     badge: 'best',
-    color: 'linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 50%, #80cbc4 100%)',
+    image: 'AI%20Image%20Generation/asset_qkw2zxl5u_1775718830045.png',
     desc: 'ツボクサエキス配合の鎮静クリーム。敏感肌や肌荒れをケアし、健やかな肌に整えます。',
     reviews: 189
   },
@@ -32,7 +32,7 @@ const products = [
     price: 2800,
     originalPrice: 3500,
     badge: 'sale',
-    color: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 50%, #ffcc80 100%)',
+    image: 'AI%20Image%20Generation/asset_l51glpfm7_1775718830045.png',
     desc: 'SPF50+ PA++++の高い紫外線防止効果。トーンアップ効果で自然な明るい肌色に。化粧下地としても。',
     reviews: 312
   },
@@ -44,7 +44,7 @@ const products = [
     price: 2400,
     originalPrice: null,
     badge: 'new',
-    color: 'linear-gradient(135deg, #fce4ec 0%, #e1bee7 50%, #ce93d8 100%)',
+    image: 'AI%20Image%20Generation/asset_x3oauqwty_1775718830045.png',
     desc: 'マットなのに乾燥しない、ベルベットテクスチャーのティントリップ。#05 ローズウッドカラー。',
     reviews: 156
   },
@@ -56,7 +56,7 @@ const products = [
     price: 2200,
     originalPrice: null,
     badge: null,
-    color: 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%)',
+    image: 'AI%20Image%20Generation/asset_o13hvvu4b_1775718830045.png',
     desc: '5種のヒアルロン酸配合。肌の角質層まで深く浸透し、内側からうるおいで満たします。',
     reviews: 278
   },
@@ -68,7 +68,7 @@ const products = [
     price: 3800,
     originalPrice: null,
     badge: 'best',
-    color: 'linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 50%, #d4bea8 100%)',
+    image: 'AI%20Image%20Generation/asset_o24mmp3im_1775718830045.png',
     desc: '水光肌を叶えるグロウタイプのクッションファンデーション。SPF42 PA++で紫外線からも肌を守ります。',
     reviews: 421
   },
@@ -80,7 +80,7 @@ const products = [
     price: 5200,
     originalPrice: 6500,
     badge: 'sale',
-    color: 'linear-gradient(135deg, #ede7f6 0%, #d1c4e9 50%, #b39ddb 100%)',
+    image: 'AI%20Image%20Generation/asset_jo9rgzld6_1775718830045.png',
     desc: 'カプセル化レチノール0.5%配合。夜のスキンケアに取り入れて、ハリのある若々しい肌へ。',
     reviews: 167
   },
@@ -92,7 +92,7 @@ const products = [
     price: 4200,
     originalPrice: null,
     badge: 'new',
-    color: 'linear-gradient(135deg, #efebe9 0%, #d7ccc8 50%, #bcaaa4 100%)',
+    image: 'AI%20Image%20Generation/asset_mxofotdey_1775718830045.png',
     desc: 'デイリーに使える9色パレット。マット・シマー・グリッターの3質感で立体的な目元を演出。',
     reviews: 98
   }
@@ -132,7 +132,7 @@ function renderProducts(filter = 'all') {
         ${product.badge ? `<span class="product-badge badge-${product.badge}">${
           product.badge === 'best' ? 'Best' : product.badge === 'new' ? 'New' : '-' + Math.round((1 - product.price / product.originalPrice) * 100) + '%'
         }</span>` : ''}
-        <div class="product-image-bg" style="background: ${product.color};"></div>
+        <img class="product-image-bg" src="${product.image}" alt="${product.name}">
         <div class="product-overlay">
           <button class="product-overlay-btn quick-view-btn" data-id="${product.id}" aria-label="クイックビュー">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -223,7 +223,7 @@ function updateCart() {
   } else {
     cartItems.innerHTML = cart.map(item => `
       <div class="cart-item">
-        <div class="cart-item-img" style="background: ${item.color}; border-radius: 8px;"></div>
+        ${item.image ? `<img class="cart-item-img" src="${item.image}" alt="${item.name}" style="border-radius:8px;object-fit:cover;">` : `<div class="cart-item-img" style="background: ${item.color||'#f0ece7'}; border-radius: 8px;"></div>`}
         <div class="cart-item-info">
           <p class="cart-item-name">${item.name}</p>
           <p class="cart-item-price">¥${(item.price * item.qty).toLocaleString()} ${item.qty > 1 ? `(×${item.qty})` : ''}</p>
