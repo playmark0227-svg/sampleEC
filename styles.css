@@ -606,6 +606,8 @@ img {
 }
 
 .category-img img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -700,6 +702,8 @@ img {
 }
 
 .product-image-bg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -988,6 +992,8 @@ img {
 }
 
 .arrival-img img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;

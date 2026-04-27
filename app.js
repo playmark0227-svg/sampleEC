@@ -262,7 +262,7 @@ function openQuickView(product) {
   currentModalProduct = product;
   modalQty = 1;
 
-  document.getElementById('modalImg').style.background = product.color;
+  document.getElementById('modalImg').innerHTML = `<img src="${product.image}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`;
   document.getElementById('modalCategory').textContent = product.categoryLabel;
   document.getElementById('modalTitle').textContent = product.name;
   document.getElementById('modalDesc').textContent = product.desc;
